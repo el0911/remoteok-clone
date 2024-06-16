@@ -31,6 +31,7 @@ interface JobData {
   createdAt: Date;
   backgroundColor?: string;
   textColor?: string;
+  extra?:any,
   id: string; // Assuming id is a string, adjust as per your actual type
 }
 
@@ -129,7 +130,7 @@ const JobCard: React.FC<JobCardProps> = ({ details, isActive, onClick, innerJobD
 
       {showJobListing && (
         <div>
-          <JobListing jobData={innerJobData} />
+          <JobListing jobData={details.extra} />
         </div>
       )}
     </div>

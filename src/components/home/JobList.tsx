@@ -5,80 +5,38 @@ import JobCard from "./JobCard";
 // Import the job data array
 const jobData = [
   {
-    "title": "Software Engineer",
-    "companyName": "TechCorp",
-    "companyIcon": "/assets/company1.png",
-    "location": { "short": "NY", "name": "New York" },
+    "title": "Freelancer",
+    "companyName": "Crosby Development",
+    "companyIcon": "https://assets-global.website-files.com/6372777fbe45dea33d0c2638/63794df920daa9ee7af9b164_Crosby%20-%20Logo.svg",  // No icon provided in the text
+    "location": {
+      "short": "Remote",
+      "name": "Stockholm"
+    },
+    "extra":{
+      "companyLogo": "https://assets-global.website-files.com/6372777fbe45dea33d0c2638/63794df920daa9ee7af9b164_Crosby%20-%20Logo.svg",  // No logo provided in the text
+      "companyName": "Crosby Development",
+      "jobTitle": "Freelancer",
+      "jobDescription": "<p>We're looking for a skilled freelancer to develop our current setup further for creating visually cohesive on-brand assets, starting with still images and possibly expanding to moving images...</p>",
+      "viewsCount": 0,  // Views count not provided
+      "appliedCount": 0,  // Applied count not provided
+      "applyLink": "",  // No apply link provided, would need to be updated
+      "salaryRange": "",  // No salary range provided
+      "benefits": "",  // No benefits provided
+      "location": "Stockholm (Remote possible)"
+    },
     "filters": {},
-    "package": { "from": 60000, "to": 150000 },
-    "verified": true,
-    "hot": false,
-    "new": true,
-    "createdAt": new Date("2023-12-16T00:00:00.000Z"),
-    "backgroundColor": "#2c2c2c",
-    "textColor": "white",
-    id:'1'
-  },
-  {
-    "title": "Product Manager",
-    "companyName": "InnovateX",
-    "companyIcon": "/assets/company2.png",
-    "location": { "short": "SF", "name": "San Francisco" },
-    "filters": {},
-    "package": { "from": 70000, "to": 130000 },
-    "verified": false,
-    "hot": true,
-    "new": false,
-    "createdAt": new Date("2023-12-16T00:00:00.000Z"),
-    "backgroundColor": "#3c3c3c",
-    "textColor": "black",
-    id:'2'
-  },
-  {
-    "title": "Data Scientist",
-    "companyName": "DataPros",
-    "companyIcon": "/assets/company3.png",
-    "location": { "short": "LDN", "name": "London" },
-    "filters": {},
-    "package": { "from": 65000, "to": 145000 },
-    "verified": true,
-    "hot": false,
-    "new": true,
-    "createdAt": new Date("2023-12-16T00:00:00.000Z"),
-    "backgroundColor": "#4c4c4c",
-    "textColor": "white",
-    id:'3'
-  },
-  {
-    "title": "UX Designer",
-    "companyName": "DesignHub",
-    "companyIcon": "/assets/company4.png",
-    "location": { "short": "BLN", "name": "Berlin" },
-    "filters": {},
-    "package": { "from": 55000, "to": 125000 },
-    "verified": false,
-    "hot": true,
-    "new": false,
-    "createdAt": new Date("2023-12-16T00:00:00.000Z"),
-    "backgroundColor": "#5c5c5c",
-    "textColor": "black",
-    id:'4'
-  },
-  {
-    "title": "DevOps Engineer",
-    "companyName": "CloudBase",
-    "companyIcon": "/assets/company5.png",
-    "location": { "short": "TKY", "name": "Tokyo" },
-    "filters": {},
-    "package": { "from": 70000, "to": 140000 },
-    "verified": true,
-    "hot": true,
-    "new": true,
-    "createdAt": new Date("2023-12-16T00:00:00.000Z"),
-    "backgroundColor": "#6c6c6c",
-    "textColor": "white",
-    id:'5'
-  }
+    "package": {
+      "from": 0,  // No salary range provided, assuming 0 for freelance
+      "to": 0    // No salary range provided, assuming 0 for freelance
+    },
+    "verified": false,  // Verification status not provided
+    "hot": false,  // Hot status not mentioned
+    "new": true,  // Assuming it's a new post
+    "createdAt": "2023-12-16T00:00:00.000Z",  // Assuming today's date for creation
+    "backgroundColor": "#2c2c2c",  // Assuming default value
+    "textColor": "white",  // Assuming default value
+    "id": "1",  // Assuming a default ID
+  } 
 ];
 
 // Define TypeScript types for job data
@@ -96,22 +54,6 @@ export interface InnerJobDataInterface {
 }
 
 
- // Example job data
- const innerJobData: InnerJobDataInterface = {
-  companyLogo:
-    'https://remoteok.com/cdn-cgi/image/format=auto,fit=contain,width=300,height=300,quality=80/https://remoteok.com/assets/img/jobs/aa6310daaf35eac44bfe1bd19aa4b68e1718294414.gif?',
-  companyName: '7shifts',
-  jobTitle: 'Remote Manager Customer Support',
-  jobDescription:
-    '<p>As the Manager, Customer Support at 7shifts...</p>', // Ensure HTML is properly formatted
-  viewsCount: 65,
-  appliedCount: 11,
-  applyLink: '/l/800405', // Adjust based on actual link
-  salaryRange: '$80,000 — $240,000/year',
-  benefits:
-    '<p>💰 401(k)</p><p>🌎 Distributed team</p><p>⏰ Async</p>...', // Ensure HTML is properly formatted
-  location: 'Toronto, Ontario, Canada',
-};
  
 
 const JobList = () => {
@@ -136,11 +78,9 @@ const JobList = () => {
       {jobData.map((job, index) => (
         <JobCard
           key={index}
-          details={job}
+          details={job as any}
           isActive={index === activeJobIndex}
-          onClick={(id:string) => handleJobClick(index,id)}
-          innerJobData = {innerJobData}
-        />
+          onClick={(id: string) => handleJobClick(index, id)} innerJobData={undefined as any}         />
       ))}
     </div>
   );

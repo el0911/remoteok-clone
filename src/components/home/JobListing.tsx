@@ -42,7 +42,7 @@ const JobListing: React.FC<JobListingProps> = ({ jobData }) => {
         <div className="description" itemProp="description">
           <div className="company_profile">
             <a className="no-border" href={companyLogo}>
-              <img alt={companyName} className="logo lazyloaded" src={companyLogo} />
+              <img width={"100px"} alt={companyName} className="logo lazyloaded" src={companyLogo} />
             </a>
             <h1 style={{
               fontSize:'40px',
