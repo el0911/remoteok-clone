@@ -10,7 +10,7 @@ const SubscribeAlertBar = () => {
       style={{ display: isVisible ? "block" : "none" }}
       className="fixed z-[1000] bottom-0 w-full bg-color-bg-hover border-t border-white border-solid border-opacity-10 text-center pt-3 px-2 pb-4"
     >
-      <div className="me-3 text-slate-300 m-1 md:inline-block">
+      {/* <div className="me-3 text-slate-300 m-1 md:inline-block">
         Get new remote jobs sent to
       </div>
       <input
@@ -29,7 +29,7 @@ const SubscribeAlertBar = () => {
         onClick={() => setIsVisible(false)}
       >
         ×
-      </div>
+      </div> */}
     </form>
   );
 };

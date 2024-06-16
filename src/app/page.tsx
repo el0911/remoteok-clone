@@ -22,7 +22,7 @@ export default function Home() {
             <div className="drop-shadow-2xl">
               find a{" "}
               <span className="font-bold">
-                <span className="hidden sm:contents">remote</span> job
+                <span className="hidden sm:contents">Comfy UI</span> Job
               </span>
             </div>
             <div className="hidden sm:contents drop-shadow-2xl">
@@ -52,7 +52,7 @@ export default function Home() {
 
       <FilterBar />
 
-      <section className="max-w-[1100px] mx-auto">
+      {/* <section className="max-w-[1100px] mx-auto">
         <Link
           href="https://safetywing.com/nomad-health?referenceID=24730000"
           target="_blank"
@@ -79,7 +79,7 @@ export default function Home() {
             </button>
           </div>
         </Link>
-      </section>
+      </section> */}
 
       <section className="max-w-[1100px] mx-auto mb-24">
         <JobList />

@@ -125,7 +125,7 @@ const FilterBar = () => {
         isSticky ? "sticky" : "relative"
       } bg-color-bg bg-opacity-[0.98] top-0 pt-1`}
     >
-      <div className="relative max-w-[1100px] mx-auto overflow-x-auto">
+      {/* <div className="relative max-w-[1100px] mx-auto overflow-x-auto">
         <div className="flex items-start">
           <NavMenu onClick={onInputFieldClick} />
           <div>
@@ -199,7 +199,7 @@ const FilterBar = () => {
         ) : dropdownType !== "" ? (
           <DropDownList list={[]} />
         ) : null}
-      </div>
+      </div> */}
     </section>
   );
 };
