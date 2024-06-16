@@ -90,9 +90,9 @@ const JobListing: React.FC<JobListingProps> = ({ jobData }) => {
         </a>
         <p style={{ fontSize: '0.85em' }}>
           <strong>👉 Please reference you found the job on Remote OK, this helps us get more companies to post here, thanks!</strong>
-          <br />
-          <br />
-          When applying for jobs, you should NEVER have to pay to apply. You should also NEVER have to pay to buy equipment which they then pay you back for later. Also never pay for trainings you have to do. Those are scams! NEVER PAY FOR ANYTHING! Posts that link to pages with "how to work online" are also scams. Don't use them or pay for them. Also always verify you're actually talking to the company in the job post and not an imposter. A good idea is to check the domain name for the site/email and see if it's the actual company's main domain name. Scams in remote work are rampant, be careful!{' '}
+          <br></br>
+          <br></br>
+            {`          When applying for jobs, you should NEVER have to pay to apply. You should also NEVER have to pay to buy equipment which they then pay you back for later. Also never pay for trainings you have to do. Those are scams! NEVER PAY FOR ANYTHING! Posts that link to pages with "how to work online" are also scams. Don't use them or pay for them. Also always verify you're actually talking to the company in the job post and not an imposter. A good idea is to check the domain name for the site/email and see if it's the actual company's main domain name. Scams in remote work are rampant, be careful! `}
           <a
             href="https://twitter.com/levelsio/status/1300443073562980353?s=20"
             style={{ fontWeight: 800 }}

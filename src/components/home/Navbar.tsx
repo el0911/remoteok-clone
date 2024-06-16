@@ -14,7 +14,7 @@ const Navbar = () => {
             href="/"
             className="px-1 text-2xl font-extrabold border-s-4 border-white leading-5"
           >
-            <span>It's OK</span>
+            <span>{`It's OK`}</span>
             <span className="text-xs ms-1">®</span>
           </Link>
         </span>
