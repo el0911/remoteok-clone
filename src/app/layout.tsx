@@ -5,8 +5,8 @@ import { nunito, pacifico } from "@/styles/fonts";
 import AuthProvider from "../context/AuthProvider";
 
 export const metadata: Metadata = {
-  title: "RemoteOkClone",
-  description: "Find remote jobs of your choices.",
+  title: "Get comfy Jobs",
+  description: "Find ComfyUi Jobs.",
 };
 
 export default function RootLayout({
