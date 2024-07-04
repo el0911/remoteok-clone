@@ -34,19 +34,40 @@ const JobListing: React.FC<JobListingProps> = ({ jobData }) => {
 
   return (
     <td style={{
-      background:'white',
-      color:'black',
-      padding:'30px'
-    }}  colSpan={999} className="heading">
+      background: 'white',
+      color: 'black',
+      padding: '30px'
+    }} colSpan={999} className="heading">
       <div className="expandContents">
+      <div style={{
+          width: '100%',
+          padding: '10px',
+          textAlign: 'center',
+          margin: '40px 0'
+        }} >
+          <a
+            style={{
+              background: 'black',
+              color: 'white',
+              padding: '15px',
+              borderRadius: '5px'
+            }}
+            
+            href={applyLink}
+            target="_blank"
+            rel="nofollow"
+          >
+            Apply for this job
+          </a>
+        </div>
         <div className="description" itemProp="description">
           <div className="company_profile">
             <a className="no-border" href={companyLogo}>
               <img width={"100px"} alt={companyName} className="logo lazyloaded" src={companyLogo} />
             </a>
             <h1 style={{
-              fontSize:'40px',
-              fontWeight:'bold'
+              fontSize: '40px',
+              fontWeight: 'bold'
             }}>{companyName}</h1>
             <a target="_blank" className="button action-apply" href={applyLink}>
               Apply now
@@ -80,19 +101,32 @@ const JobListing: React.FC<JobListingProps> = ({ jobData }) => {
       </div>
       <div style={{ clear: 'both' }}></div>
       <div className="instructions">
-        <a
-          className="button action-apply apply_800405"
-          href={applyLink}
-          target="_blank"
-          rel="nofollow"
-        >
-          Apply for this job
-        </a>
+        <div style={{
+          width: '100%',
+          padding: '10px',
+          textAlign: 'center',
+          margin: '40px 0'
+        }} >
+          <a
+            style={{
+              background: 'black',
+              color: 'white',
+              padding: '15px',
+              borderRadius: '5px'
+            }}
+
+            href={applyLink}
+            target="_blank"
+            rel="nofollow"
+          >
+            Apply for this job
+          </a>
+        </div>
         <p style={{ fontSize: '0.85em' }}>
           <strong>👉 Please reference you found the job on Remote OK, this helps us get more companies to post here, thanks!</strong>
           <br></br>
           <br></br>
-            {`          When applying for jobs, you should NEVER have to pay to apply. You should also NEVER have to pay to buy equipment which they then pay you back for later. Also never pay for trainings you have to do. Those are scams! NEVER PAY FOR ANYTHING! Posts that link to pages with "how to work online" are also scams. Don't use them or pay for them. Also always verify you're actually talking to the company in the job post and not an imposter. A good idea is to check the domain name for the site/email and see if it's the actual company's main domain name. Scams in remote work are rampant, be careful! `}
+          {`          When applying for jobs, you should NEVER have to pay to apply. You should also NEVER have to pay to buy equipment which they then pay you back for later. Also never pay for trainings you have to do. Those are scams! NEVER PAY FOR ANYTHING! Posts that link to pages with "how to work online" are also scams. Don't use them or pay for them. Also always verify you're actually talking to the company in the job post and not an imposter. A good idea is to check the domain name for the site/email and see if it's the actual company's main domain name. Scams in remote work are rampant, be careful! `}
           <a
             href="https://twitter.com/levelsio/status/1300443073562980353?s=20"
             style={{ fontWeight: 800 }}
