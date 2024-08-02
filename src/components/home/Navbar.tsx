@@ -35,13 +35,21 @@ const Navbar = () => {
           >
             Log in
           </Link>
+           
           <div className="hidden 1.5lg:block w-40"></div>
           <Link
             href="/hire-remotely"
             className="ms-2 block 1.5lg:fixed right-3 z-[1001] p-2 font-extrabold rounded-xl hover:text-red-500 bg-red-500 hover:bg-transparent border-2 border-solid border-red-500 hover:border-red-500 transition-all ease-linear"
           >
             Post <span className="hidden sm:contents">a remote</span> job
-          </Link> */}
+          </Link> 
+ */}
+          <Link
+            href="https://tcha9gq46ae.typeform.com/to/WR4fJJXs"
+            className="ms-2 block 1.5lg:fixed right-3 z-[1001] p-2 font-extrabold rounded-xl hover:text-red-500 bg-red-500 hover:bg-transparent border-2 border-solid border-red-500 hover:border-red-500 transition-all ease-linear"
+          >
+            Post <span className="hidden sm:contents">a remote</span> job
+          </Link> 
         </div>
       </nav>
     </header>
